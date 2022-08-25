@@ -1,0 +1,44 @@
+/* fc-day */
+
+
+/* fc-toolbar */
+.fc .fc-toolbar.fc-header-toolbar { margin-bottom: 1em;}
+
+/* fullcalendar toolbar title font size down */
+.fc .fc-toolbar-title { font-size: 1.4em; }
+
+
+
+.fc .fc-daygrid-day { cursor: pointer; }
+.fc .fc-daygrid-day:hover { background-color: aquamarine; }
+.fc .fc-daygrid-day.active .fc-daygrid-day-frame {
+    border-top: 1px;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-left: 1px;
+    border-style: solid;
+    border-color: var(--bs-yellow);
+}
+
+.fc .fc-daygrid-day.fc-day-today { cursor: default; }
+
+.fc .fc-daygrid-day.fc-day-sat { color: var(--bs-blue); }
+.fc .fc-daygrid-day.fc-day-sun { color: var(--bs-red); }
+
+.fc .fc-today-button { 
+    padding: 0.25rem 0.5rem;
+    font-size: .875rem;
+    border-radius: 0.2rem;
+}
+
+.fc .fc-prev-button {
+    padding: 0.25rem 0.5rem;
+    font-size: .875rem;
+    border-radius: 0.2rem;
+}
+
+.fc .fc-next-button {
+    padding: 0.25rem 0.5rem;
+    font-size: .875rem;
+    border-radius: 0.2rem;
+}
