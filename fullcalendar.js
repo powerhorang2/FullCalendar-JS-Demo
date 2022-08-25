@@ -24,3 +24,9 @@ function showActiveDate() {
         currentDateEl.classList.add('active');
     }
 }
+
+function addEventRenderActiveDateToToolbarBtn() {
+    document.querySelectorAll('.fc-toolbar button').forEach(el => {
+        el.addEventListener('click', showActiveDate)
+    });
+}
