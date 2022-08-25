@@ -12,12 +12,31 @@ document.addEventListener('DOMContentLoaded', function() {
             center: 'title',
             end: 'prev,next'
         },
+        dateClick: function(info) {
+            changeActiveDate(info.dayEl, info.date)
+        }
 
     });
     calendar.render()
     showActiveDate();
     addEventRenderActiveDateToToolbarBtn();
 });
+
+function changeActiveDate(dayEl, date) {
+
+    let fcDayEls = document.querySelector('.fc-daygrid-day.active');
+
+    if (fcDayEls) {
+        fcDayEls.classList.remove('active');
+    }
+
+    console.log(date)
+
+    dayEl.classList.add('active');
+    fncCurrentDate = new Date(date);
+    addEventRenderActiveDateToToolbarBtn();
+}
+
 function showActiveDate() {
     let fullYear = fncCurrentDate.getFullYear();
 
