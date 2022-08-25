@@ -1,5 +1,23 @@
 let fncCurrentDate = new Date();
 
+document.addEventListener('DOMContentLoaded', function() {
+    let calendarEl = document.getElementById('calendar');
+    let calendar = new FullCalendar.Calendar(calendarEl, {
+        themeSystem: 'bootstrap5',
+        initialView: 'dayGridMonth',
+        locale: 'ko',
+        timeZone: 'UTC',
+        headerToolbar: {
+            start: 'today',
+            center: 'title',
+            end: 'prev,next'
+        },
+
+    });
+    calendar.render()
+    showActiveDate();
+    addEventRenderActiveDateToToolbarBtn();
+});
 function showActiveDate() {
     let fullYear = fncCurrentDate.getFullYear();
 
