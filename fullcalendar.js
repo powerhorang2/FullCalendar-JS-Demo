@@ -30,8 +30,6 @@ function changeActiveDate(dayEl, date) {
         fcDayEls.classList.remove('active');
     }
 
-    console.log(date)
-
     dayEl.classList.add('active');
     fncCurrentDate = new Date(date);
     addEventRenderActiveDateToToolbarBtn();
